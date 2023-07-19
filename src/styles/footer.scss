@@ -1,0 +1,36 @@
+.footer {
+  border-top: 1.2px solid #ccc;
+  background-color: white;
+
+  .footer_container {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .social {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      a {
+        color: black;
+      }
+
+      i {
+        cursor: pointer;
+        // background: linear-gradient(
+        //   45deg,
+        //   #f09433 0%,
+        //   #e6683c 25%,
+        //   #dc2743 50%,
+        //   #cc2366 75%,
+        //   #bc1888 100%
+        // );
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.banner_inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+
+  .top_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    h1 {
+      font-size: 65px;
+    //   transform: scaleY(1.25);
+      font-weight: 700;
+      margin: 0;
+    }
+    h2 {
+      font-weight: 500;
+      font-size: 48px;
+      margin-top: 8px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  .bottom_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    
+    p {
+        font-weight: 300;
+        font-size: 17.5px;
+    }
+  }
+}

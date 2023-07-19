@@ -1,0 +1,21 @@
+#add {
+    outline: none;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #fb923c;
+    transition: background-color 300ms;
+}
+#add:hover {
+    background-color: #ff9b49;
+    transition: background-color 
+}
+
+#btn_disabled {
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #e3e2e2;
+    cursor: not-allowed !important;
+}

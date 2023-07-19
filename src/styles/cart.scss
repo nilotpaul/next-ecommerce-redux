@@ -1,0 +1,212 @@
+.cart_div {
+  .inside_cart_container {
+    width: 70%;
+    margin: 65px auto;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0.5px #ccc;
+    border: 0.2px solid #ccc;
+
+    .last {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 0 10px;
+      margin-top: 80px;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+
+        form {
+          display: flex;
+          align-items: center;
+          column-gap: 1px;
+          input {
+            padding: 7px;
+            outline: none;
+            border: 1px solid black;
+          }
+
+          button {
+            padding: 7px 15px;
+            outline: none;
+            border: 1px solid black;
+            background-color: #000;
+            color: whitesmoke;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        justify-content: center;
+        column-gap: 2px;
+        position: relative;
+
+        button {
+          outline: none;
+          border: 1px solid black;
+          cursor: pointer;
+        }
+
+        #checkout {
+          display: block;
+          padding: 10px 80px;
+          background-color: #ff9b49;
+          transition: background-color 500ms;
+
+          a {
+            text-decoration: none;
+            color: #000;
+          }
+        }
+
+        #checkout:hover {
+          background-color: #ffa963;
+          transition: background-color 500ms;
+        }
+
+        #shop_btn {
+          display: block;
+          padding: 0 10px;
+          background-color: black;
+        }
+
+        #shop_ico {
+          display: block;
+          color: white;
+        }
+
+        #continue_shopping {
+          background-color: #000;
+          color: whitesmoke;
+          position: absolute;
+          top: 45px;
+          left: 160px;
+          width: 70%;
+          padding: 10px 0;
+          transition: all 300ms;
+        }
+      }
+    }
+
+    .calculate_totals {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 25px;
+        padding: 15px 25px;
+        background: transparent;
+        border: 0.1px solid #000;
+      }
+
+      input {
+        outline: none;
+        padding: 5px;
+      }
+
+      .promo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+      }
+    }
+
+    .children {
+      display: grid;
+      grid-template-columns: 3fr 1fr 2fr 0.5fr;
+      list-style: none;
+      padding: 10px;
+      row-gap: 30px;
+
+      li {
+        border-bottom: 1.2px solid #ccc;
+        padding-bottom: 40px;
+      }
+
+      #second,
+      #third {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #second {
+        font-weight: 700;
+      }
+
+      #first {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      #fourth {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: 500;
+      }
+
+      li {
+        .info {
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+
+          i #rem_button {
+            display: block;
+            color: red;
+            font-size: 25px;
+            font-weight: 700;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .head {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr 0.5fr;
+    margin: 0;
+    padding: 15px;
+    background-color: #ff9b49;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: 500;
+
+    #second,
+    #third {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #first {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 80px;
+    }
+
+    #fourth {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}

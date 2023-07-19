@@ -1,0 +1,41 @@
+.gurantee_inside {
+  // background-color: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 50px;
+
+  .items-1,
+  .items-2,
+  .items-3,
+  .items-4 {
+    background-color: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    margin: auto 0;
+
+    .info {
+      h4 {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: #4a4a4a;
+        font-size: 14.5px;
+      }
+    }
+
+    i > #shop_ico,
+    #support_ico,
+    #return_ico,
+    #payment_ico {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+nav {
+  background-color: white;
+  position: sticky;
+  width: 100%;
+  padding: 15px 0;
+  // border-bottom: 1.2px solid rgb(152, 152, 152);
+  box-shadow: 0px -20px 35px 0px;
+
+  .nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+  }
+
+  .left_side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #brandname {
+      text-decoration: none;
+      color: black;
+    }
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      font-size: 26px;
+    }
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    position: relative;
+
+    .cart_drop {
+      position: absolute;
+      position: absolute;
+      top: 40px;
+      right: 80px;
+      background: whitesmoke;
+      box-shadow: 0px 0px 10px 0.5px #ccc;
+      padding: 5px 30px;
+      width: max-content;
+      border-top: 2px solid blue;
+      transition: all 300ms;
+      z-index: 10;
+
+      a {
+        text-decoration: none;
+      }
+
+      button {
+        text-decoration: none;
+        color: black;
+        padding: 6px 5px;
+        background-color: #ff9b49;
+        font-weight: 500;
+        border-radius: 4px;
+        margin-top: 25px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+
+      .cart_items_div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        margin: 15px 0px;
+
+        i #rem_ico {
+          display: block;
+          color: red;
+          font-size: 25px;
+          font-weight: bolder;
+          cursor: pointer;
+        }
+      }
+
+      .first_cart {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+
+        span {
+          border-radius: 50%;
+          padding: 1px 6px;
+          background-color: #ff9b49;
+          position: absolute;
+          color: black;
+        }
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+      h2 {
+        font-size: 15px;
+      }
+    }
+
+    .profile_drop {
+      position: absolute;
+      background-color: whitesmoke;
+      right: 20px;
+      top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+      width: max-content;
+      background: whitesmoke;
+      box-shadow: 0px 0px 10px 0.5px #ccc;
+      padding: 15px 20px;
+      transition: all 300ms;
+      font-weight: 500;
+      border-top: 2px solid blue;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        padding: 6px 16px;
+        margin-top: 5px;
+        background-color: #ff9b49;
+      }
+    }
+
+    button {
+      outline: none;
+      border: 0;
+      position: relative;
+      display: block;
+      background: transparent;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        top: -5px;
+        left: -4px;
+        background-color: #ff9b49;
+        padding: 0 4px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      #shop_ico {
+        height: 22px;
+        width: 22px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #profile_ico {
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+  visibility: collapse;
+  transition: all 300ms;
+}

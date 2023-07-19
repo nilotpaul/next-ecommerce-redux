@@ -1,0 +1,13 @@
+#add_to_cart {
+    outline: none;
+    border: 0.5px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #fb923c;
+    transition: background-color 300ms;
+}
+#add_to_cart:hover {
+    background-color: #ff9b49;
+    transition: background-color 300ms;
+}
