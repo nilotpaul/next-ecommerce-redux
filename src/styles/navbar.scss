@@ -2,21 +2,67 @@ nav {
   background-color: white;
   position: sticky;
   width: 100%;
-  padding: 15px 0;
+  padding: 14px 0;
   // border-bottom: 1.2px solid rgb(152, 152, 152);
-  box-shadow: 0px -20px 35px 0px;
+  box-shadow: 0px -25px 35px 0px;
+
+  @media only screen and (max-width: 640px) {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+  }
 
   .nav_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 50px;
+    margin: 0 60px;
+
+    @media only screen and (max-width: 640px) {
+      margin: 0 10px;
+    }
+
+    #login {
+      padding: 7px 20px;
+      margin: 4.5px 0;
+      border-radius: 4px;
+      outline: none;
+      border: 0;
+      background-color: #ff9b49;
+      font-weight: 500;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      transition: background-color 300ms;
+
+      &:hover {
+        transition: background-color 300ms;
+        background-color: #ffaa65;
+      }
+    }
   }
 
   .left_side {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 640px) {
+      #logo {
+        height: 40px;
+        width: 130px;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+
+      img {
+        object-fit: cover;
+      }
+    }
 
     #brandname {
       text-decoration: none;
@@ -126,20 +172,72 @@ nav {
       a {
         text-decoration: none;
         color: black;
-        font-weight: 600;
+        font-weight: 500;
         padding: 6px 16px;
         margin-top: 5px;
         background-color: #ff9b49;
       }
     }
 
-    button {
+    #mobile_cart {
+      color: black;
+      text-decoration: none;
+      display: none;
+
+      @media only screen and (max-width: 640px) {
+        display: block;
+        position: relative;
+
+        #mobile_ico {
+          height: 22px;
+          width: 22px;
+        }
+
+        span {
+          position: absolute;
+          top: -5px;
+          left: -4px;
+          background-color: #ff9b49;
+          padding: 0 4px;
+          cursor: pointer;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    #profile_btn {
       outline: none;
       border: 0;
       position: relative;
       display: block;
       background: transparent;
       cursor: pointer;
+
+      #profile_ico {
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    #cart_btn {
+      outline: none;
+      border: 0;
+      position: relative;
+      display: block;
+      background: transparent;
+      cursor: pointer;
+
+      @media only screen and (max-width: 640px) {
+        display: none;
+      }
+
+      button {
+        border: 0;
+        outline: none;
+      }
 
       span {
         position: absolute;
@@ -154,13 +252,6 @@ nav {
       #shop_ico {
         height: 22px;
         width: 22px;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-      #profile_ico {
-        border-radius: 50%;
 
         &:hover {
           cursor: pointer;

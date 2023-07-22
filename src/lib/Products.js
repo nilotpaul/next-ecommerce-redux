@@ -1,14 +1,14 @@
 export const products = [
     {
         id: 1,
-        name: "Diverse Men's Regular Formal Shirt",
+        name: "Men's Regular Formal Shirt",
         desc: "Crafted in a pure cotton fabric, this long-sleeved, regular-fit modern shirt offers superb comfort and an impeccable finish. A reliable option for business wear, the shirt features a modern spread collar and button cuffs, a shirt straight hem and a chest patch pocket. Team with tailored trousers and blazer for a pared-back professional look. Diverse is a western wear brand of everyday wear for Men and Women. It offers affordable fashion in quality fabrics and fabulous fits. Our products are completely conceptualized and created in India.",
         price: "691",
         img: "https://m.media-amazon.com/images/I/71w+tRy3BrL._UY879_.jpg"
     },
     {
         id: 2,
-        name: "Diverse Men's Printed Formal Shirt",
+        name: "Men's Printed Formal Shirt",
         desc: "Diverse is a western wear value brand for men. Our range consists of basic and updated basic apparel across both formal and casual wear. We offer the right blend of quality, style and value aimed to delight our customers.",
         price: "540",
         img: "https://m.media-amazon.com/images/I/910nuRSt6iL._UY879_.jpg"
@@ -36,21 +36,21 @@ export const products = [
     },
     {
         id: 6,
-        name: "Miss Chase Women's Cotton Full Sleeve Collared Top",
+        name: "Women's Cotton Full Sleeve Collared Top",
         desc: "Black solid sleeveless bodycon mini dress, has sweetheart square neckline and adjustable straps.",
         price: "561",
         img: "https://m.media-amazon.com/images/I/814hw5t9OeL._UY879_.jpg"
     },
     {
         id: 7,
-        name: "uppercase Matrix Professional Anti-theft Laptop Backpack",
+        name: "Professional Anti-theft Laptop Backpack",
         desc: "This 19L anti-theft laptop backpack promises durability, robustness, and reliability. It successfully goes through the tear test, break test, and 2000 jolt test before it reaches you.",
         price: "2,300",
         img: "https://m.media-amazon.com/images/I/91UbYvaLifL._UX679_.jpg"
     },
     {
         id: 8,
-        name: "American Tourister VALEX BLACK LAPTOP BACKPACK",
+        name: "VALEX BLACK LAPTOP BACKPACK",
         desc: "A backpack isn’t just a bag. It’s a cache, a case, a mobile base of sorts. And it is a reflection of the care you’ve put into selecting the ideal loadout of items to keep on you. Introducing Valex, a modern everyday backpacks collections are available in a variety of nice looking colours to express your true self",
         price: "1,299",
         img: "https://m.media-amazon.com/images/I/913C9PlkyfL._UX679_.jpg"

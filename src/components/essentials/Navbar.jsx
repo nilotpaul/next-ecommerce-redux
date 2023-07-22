@@ -27,31 +27,29 @@ export default function Navbar() {
   const profileRef = useRef();
 
   useEffect(() => {
-    if (data.status === "authenticated") {
-      window.addEventListener("mousedown", (e) => {
-        !cartIco.current.contains(e.target) && 
-        !cartRef.current.contains(e.target)
-          ? setOpenDrop(false)
-          : null;
-      });
-    }
-  }, [openDrop, data]);
+    window.addEventListener("mousedown", (e) => {
+      if (
+        !cartIco.current?.contains(e.target) &&
+        !cartRef.current?.contains(e.target)
+      ) {
+        setOpenDrop(false);
+      }
+    });
+  }, [openDrop]);
 
   useEffect(() => {
-    if (data.status === "authenticated") {
-      window.addEventListener("mousedown", (e) => {
-        !profileIco.current.contains(e.target) &&
-        !profileRef.current.contains(e.target)
-          ? setProfileDrop(false)
-          : null;
-      });
-    }
-  }, [profileDrop, data]);
+    window.addEventListener("mousedown", (e) => {
+      if (
+        !profileIco.current?.contains(e.target) &&
+        !profileRef.current?.contains(e.target)
+      ) {
+        setProfileDrop(false);
+      }
+    });
+  }, [profileDrop]);
 
   useEffect(() => {
-    if (data.status === "authenticated") {
-      dispatch(totals());
-    }
+    dispatch(totals());
   });
 
   return (
@@ -59,15 +57,19 @@ export default function Navbar() {
       <div className="nav_container">
         <div className="left_side">
           <Link href={"/"} id="brandname">
-            <h2>NexusMart</h2>
+            <Image id="logo" src="/logo.png" alt="NexusMart" height={37} width={180} />
           </Link>
         </div>
         {data.status === "authenticated" ? (
           <div className="items">
-            <button ref={cartIco} onClick={() => setOpenDrop(!openDrop)}>
+            <button id="cart_btn" ref={cartIco} onClick={() => setOpenDrop(!openDrop)}>
               <span>{totalCount}</span>
               <FaShoppingCart id="shop_ico" />
             </button>
+            <Link id="mobile_cart" href={"/cart"}>
+              <span>{totalCount}</span>
+              <FaShoppingCart id="mobile_ico" />
+            </Link>
 
             <div
               ref={cartRef}
@@ -83,7 +85,7 @@ export default function Navbar() {
                         <i onClick={() => dispatch(remove(items))}>
                           <CiCircleRemove id="rem_ico" />
                         </i>
-                        <Link href={`/shop/products/${items.id}`}>
+                        <Link prefetch href={`/products/${items.id}`}>
                           <div className="first_cart">
                             <span>{items.count}</span>
                             <Image
@@ -98,15 +100,16 @@ export default function Navbar() {
                       </div>
                     );
                   })}
-                  <Link id="cart_btn" href={"/cart"}>
+                  <Link prefetch id="cart_btn" href={"/cart"}>
                     <button onClick={() => setOpenDrop(false)} id="go_to_cart">
-                      CHECKOUT
+                      GO TO CART
                     </button>
                   </Link>
                 </>
               )}
             </div>
             <button
+              id="profile_btn"
               ref={profileIco}
               onClick={() => setProfileDrop(!profileDrop)}
             >
@@ -129,7 +132,11 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-        ) : null}
+        ) : (
+          <Link href={"/signin"} id="login">
+            Login
+          </Link>
+        )}
       </div>
     </nav>
   );

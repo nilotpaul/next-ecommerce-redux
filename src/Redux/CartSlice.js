@@ -31,7 +31,6 @@ export const cartSlice = createSlice({
           state.cart[index].count <= 5
             ? toast.info("quantity increased", {
                 position: "top-center",
-                autoClose: 800,
               })
             : toast.error("limit reached", {
                 position: "top-center",

@@ -5,6 +5,12 @@
   justify-content: space-around;
   margin: 0 50px;
 
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
   .items-1,
   .items-2,
   .items-3,
@@ -17,6 +23,10 @@
     align-items: flex-start;
     column-gap: 10px;
     margin: auto 0;
+
+    @media only screen and (max-width: 640px) {
+      width: 100%;
+    }
 
     .info {
       h4 {

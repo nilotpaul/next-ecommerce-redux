@@ -4,10 +4,13 @@
   height: 50vh;
   margin: 0 auto;
   background-image: url(/offer-banner.png);
-  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media only screen and (max-width: 640px) {
+    background-size: 140% 100%;
+  }
 
   .details_container {
     display: flex;
@@ -18,6 +21,7 @@
     transform: translate(-100%, -50%);
     width: 45%;
     left: 100%;
+
   }
 
   .details {
@@ -39,17 +43,20 @@
 
     h4 {
       margin-top: 0;
+      margin-bottom: 30px;
     }
-    button {
-      padding: 10px 20px;
+    a {
+      padding: 10px 30px;
       font-weight: 500;
       outline: none;
       border: 0;
       background-color: #ffcc8d;
       transition: background-color 400ms;
       cursor: pointer;
+      text-decoration: none;
+      color: black;
     }
-    button:hover {
+    a:hover {
       background-color: #ffd9aa;
       transition: background-color 400ms;
     }

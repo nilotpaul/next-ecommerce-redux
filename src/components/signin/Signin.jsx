@@ -6,11 +6,15 @@ import { signIn } from "next-auth/react";
 import { FaGithub } from "react-icons/fa";
 
 import { FcGoogle } from "react-icons/fc";
+import Loader from "@/additional/Loader";
+import { useState } from "react";
 
 export default function Signin() {
   const searchParams = useSearchParams();
-  const URL = searchParams.get("callbackUrl")
-  const callbackUrl = URL ? URL : "/"
+  const URL = searchParams.get("callbackUrl");
+  const callbackUrl = URL ? URL : "/";
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadings, setIsLoadings] = useState(false);
 
   return (
     <div
@@ -23,19 +27,32 @@ export default function Signin() {
     >
       <button
         onClick={() => {
+          setIsLoading(true);
           signIn("github", { callbackUrl });
         }}
       >
-        Sign in with GitHub
-        <FaGithub size={20} />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            Sign in with GitHub <FaGithub size={20} />
+          </>
+        )}
       </button>
       <button
         onClick={() => {
+          setIsLoadings(true);
           signIn("google", { callbackUrl });
+          setIsLoading(false)
         }}
       >
-        Sign in with Google
-        <FcGoogle size={20} />
+        {isLoadings ? (
+          <Loader />
+        ) : (
+          <>
+            Sign in with Google <FcGoogle size={20} />
+          </>
+        )}
       </button>
     </div>
   );

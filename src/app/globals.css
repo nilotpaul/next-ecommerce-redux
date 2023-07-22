@@ -1,12 +1,16 @@
 body {
-    min-height: 100vh;
-    max-width: 100%;
-    margin: auto;
-    background-color: #fafafa;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: auto;
+  background-color: #fafafa;
 }
 
-/* .signin_layout {
-    min-height: 100vh;
-    max-width: 100%;
-    margin: auto;
-} */
+@media only screen and (max-width: 640px) {
+  .Toastify__toast--success,
+  .Toastify__toast--error,
+  .Toastify__toast--info {
+    max-width: 70% !important;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}

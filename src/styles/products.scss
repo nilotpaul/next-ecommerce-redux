@@ -7,6 +7,10 @@
   row-gap: 50px;
   line-height: 30px;
 
+  @media only screen and (max-width: 640px) {
+    margin-top: 80px;
+  }
+
   .head {
     margin: 0 auto;
     text-align: center;
@@ -35,6 +39,12 @@
     gap: 30px;
     row-gap: 50px;
 
+    @media only screen and (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .items_div {
       width: 100%;
       margin-top: 50px;
@@ -43,8 +53,17 @@
       flex-direction: column;
       width: 100%;
       align-items: center;
-      justify-content: flex-start;
       row-gap: 5px;
+
+      @media only screen and (max-width: 640px) {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
 
       h3 {
         text-align: center;
@@ -57,12 +76,18 @@
       }
 
       button {
-        background-color: orange;
-        border: 1px solid #ccc;
+        background-color: #ff9b49;
+        border: 0;
         outline: none;
         padding: 6px 50px;
         margin-top: 20px;
         cursor: pointer;
+        transition: background-color 300ms;
+
+        &:hover {
+          background-color: #ffa963;
+          transition: background-color 300ms;
+        }
       }
     }
   }

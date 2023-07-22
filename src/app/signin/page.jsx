@@ -1,8 +1,11 @@
+import dynamic from "next/dynamic";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../api/auth/providers";
 import "@/components/signin/signin.scss";
 import { redirect } from "next/navigation";
-import Signin from "@/components/signin/Signin";
+const Signin = dynamic(() => import("@/components/signin/Signin"), {
+  ssr: false,
+});
 
 export default async function SigninPage() {
   const session = await getServerSession(authOptions);
@@ -13,7 +16,7 @@ export default async function SigninPage() {
   return (
     <div className="signin_div">
       <div className="signin_container">
-        <Signin />
+        <Signin session={session} />
       </div>
     </div>
   );

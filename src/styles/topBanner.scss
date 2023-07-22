@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 50%;
 
   .top_items {
     display: flex;
@@ -12,18 +11,36 @@
     justify-content: center;
     margin-top: 40px;
 
+    @media only screen and (max-width: 640px) {
+      text-align: center;
+      margin-top: 25px;
+    }
+
     h1 {
       font-size: 65px;
-    //   transform: scaleY(1.25);
+      //   transform: scaleY(1.25);
       font-weight: 700;
       margin: 0;
+      letter-spacing: 3px;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 45px;
+        letter-spacing: 1px;
+      }
     }
     h2 {
       font-weight: 500;
-      font-size: 48px;
+      font-size: 45px;
+      letter-spacing: 1px;
       margin-top: 8px;
       margin-bottom: 0;
       padding: 0;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 30px;
+        letter-spacing: 0;
+
+      }
     }
   }
 
@@ -32,16 +49,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
+
+    @media only screen and (max-width: 640px) {
+      margin-top: 80px;
+    }
 
     h4 {
-        margin: 0;
-        font-size: 22px;
-        font-weight: 400;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 400;
     }
-    
+
     p {
-        font-weight: 300;
-        font-size: 17.5px;
+      font-weight: 300;
+      font-size: 17.5px;
     }
   }
 }

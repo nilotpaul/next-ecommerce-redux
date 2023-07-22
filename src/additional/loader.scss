@@ -1,0 +1,34 @@
+.loader {
+  height: min-content;
+  width: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  transition: opacity 300ms, visibility 300ms;
+
+  &::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 2px solid black;
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spinner 800ms linear infinite;
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+  }
+}
+.hidden {
+  transition: opacity 300ms, visibility 300ms;
+  opacity: 0;
+  visibility: hidden;
+}

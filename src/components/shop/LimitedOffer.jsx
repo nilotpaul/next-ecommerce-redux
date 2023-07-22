@@ -1,5 +1,4 @@
 import "@/styles/limitedOffer.scss";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function LimitedOffer() {
@@ -14,8 +13,8 @@ export default function LimitedOffer() {
             asperiores.
           </p>
           <h4>Get This Outfit At 20% Off, Use Code OFF20</h4>
-          <Link href={"shop/products"}>
-            <button>Shop Now</button>
+          <Link prefetch href={"/products"}>
+            SHOP NOW
           </Link>
         </div>
       </div>

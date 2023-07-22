@@ -11,10 +11,28 @@
     align-items: center;
     justify-content: space-between;
 
+    span {
+        font-weight: 500;
+    }
+
+    @media only screen and (max-width: 640px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
     .social {
       display: flex;
       align-items: center;
       column-gap: 10px;
+
+      @media only screen and (max-width: 640px) {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+      }
 
       a {
         color: black;

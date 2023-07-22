@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footer_container">
-        <span>Copyright © 2023 BrandName. All rights are reserved.</span>
+        <span>Copyright &copy; 2023 BrandName. All rights are reserved.</span>
         <div className="social">
           <i>
             <BsFacebook

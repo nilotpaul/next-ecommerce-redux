@@ -1,6 +1,7 @@
 "use client";
 
 import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
 
 import Image from "next/image";
 import ItemsQty from "@/components/cart/features/ItemsQty";
@@ -13,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 
 export default function Cart() {
+  const router = useRouter();
   const dispatch = useDispatch();
   const session = useSession();
   const [onHover, setOnHover] = useState(false);
@@ -30,9 +32,9 @@ export default function Cart() {
         <>
           {cart?.length === 0 ? (
             <>
-              <p>Cart is empty!</p>
-              <Link href={"/shop"}>
-                <button>Shop Now</button>
+              <p id="empty">Cart is empty!</p>
+              <Link id="shop_now" href={"/products"}>
+                Shop Now
               </Link>
             </>
           ) : (
@@ -52,12 +54,13 @@ export default function Cart() {
                           <i onClick={() => dispatch(remove(items))}>
                             <CiCircleRemove id="rem_button" />
                           </i>
-                          <Link href={`shop/products/${items.id}`}>
+                          <Link href={`/products/${items.id}`}>
                             <Image
                               src={items.img}
                               alt={items.name}
                               width={150}
                               height={185}
+                              priority
                             />
                           </Link>
                           {items.name}
@@ -107,16 +110,15 @@ export default function Cart() {
                   >
                     <AiFillShopping id="shop_ico" />
                   </button>
-                  <Link href={"/shop"}>
-                    <button
-                      id="continue_shopping"
-                      onMouseEnter={() => setOnHover(!onHover)}
-                      onMouseLeave={() => setOnHover(false)}
-                      className={onHover === false ? "hidden" : ""}
-                    >
-                      Continue shopping
-                    </button>
-                  </Link>
+                  <button
+                    onClick={() => router.push("/")}
+                    id="continue_shopping"
+                    onMouseEnter={() => setOnHover(!onHover)}
+                    onMouseLeave={() => setOnHover(false)}
+                    className={onHover === false ? "hidden" : ""}
+                  >
+                    Continue shopping
+                  </button>
                 </div>
               </div>
             </div>

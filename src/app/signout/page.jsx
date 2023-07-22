@@ -1,4 +1,7 @@
-import Signout from "@/components/signout/Signout";
+import dynamic from "next/dynamic";
+const Signout = dynamic(() => import("@/components/signout/Signout"), {
+  ssr: false,
+});
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "../api/auth/providers";
 import { redirect } from "next/navigation";
