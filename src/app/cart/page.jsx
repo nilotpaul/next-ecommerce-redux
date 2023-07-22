@@ -104,9 +104,7 @@ export default function Cart() {
                   </form>
                 </div>
                 <div className="right">
-                  <button id="checkout">
-                    <Link href={"/checkout"}>Checkout</Link>
-                  </button>
+                    <Link id="checkout" href={"/checkout"}>Checkout</Link>
                   <button
                     onMouseEnter={() => setOnHover(!onHover)}
                     onMouseLeave={() => setOnHover(false)}

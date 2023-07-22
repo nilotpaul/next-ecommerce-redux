@@ -136,16 +136,13 @@
           width: 100%;
         }
 
-        button {
-          outline: none;
-          border: 1px solid black;
-          cursor: pointer;
-        }
-
         #checkout {
           display: block;
           padding: 10px 80px;
           background-color: #ff9b49;
+          text-decoration: none;
+          color: black;
+          text-align: center;
           transition: background-color 500ms;
 
           @media only screen and (max-width: 640px) {
@@ -153,6 +150,7 @@
             font-size: 18px;
             border: none;
             font-size: 20px;
+            margin: auto;
           }
 
           a {
