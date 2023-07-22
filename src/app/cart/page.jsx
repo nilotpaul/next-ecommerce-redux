@@ -2,9 +2,10 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 
 import Image from "next/image";
-import ItemsQty from "@/components/cart/features/ItemsQty";
+const ItemsQty = dynamic(() => import("@/components/cart/features/ItemsQty"));
 import "@/styles/cart.scss";
 import { CiCircleRemove } from "react-icons/ci";
 import { remove, totals } from "@/Redux/CartSlice";
@@ -28,9 +29,9 @@ export default function Cart() {
 
   return (
     <div className="cart_div">
-      {session.status === "authenticated" ? (
+      {session?.status === "authenticated" ? (
         <>
-          {cart?.length === 0 ? (
+          {cart.length === 0 ? (
             <>
               <p id="empty">Cart is empty!</p>
               <Link id="shop_now" href={"/products"}>
@@ -46,7 +47,7 @@ export default function Cart() {
                 <li id="fourth">Subtotal</li>
               </ul>
               <>
-                {cart?.map((items) => {
+                {cart.map((items) => {
                   return (
                     <ul key={items.id} className="children">
                       <li id="first" key={items.id}>
@@ -56,6 +57,9 @@ export default function Cart() {
                           </i>
                           <Link href={`/products/${items.id}`}>
                             <Image
+                              style={{
+                                objectFit: "contain",
+                              }}
                               src={items.img}
                               alt={items.name}
                               width={150}
@@ -63,7 +67,7 @@ export default function Cart() {
                               priority
                             />
                           </Link>
-                          {items.name}
+                          <p>{items.name}</p>
                         </div>
                       </li>
                       <li id="second">₹ {items.price}</li>
@@ -94,9 +98,9 @@ export default function Cart() {
               <div className="last">
                 <div className="left">
                   <label>if you have a promo code, enter it here:</label>
-                  <form>
-                    <input type="text" placeholder="enter promo code" />
-                    <button>Apply Discount</button>
+                  <form onSubmit={(e) => e.preventDefault()}>
+                    <input type="text" placeholder="Enter promo code" />
+                    <button type="submit">Apply Discount</button>
                   </form>
                 </div>
                 <div className="right">
@@ -124,7 +128,7 @@ export default function Cart() {
             </div>
           )}
         </>
-      ) : null}
+      ) : <></>}
     </div>
   );
 }

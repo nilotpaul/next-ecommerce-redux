@@ -57,6 +57,11 @@
         margin-top: 10px;
         font-weight: 500;
 
+        @media only screen and (max-width: 640px) {
+          font-size: 20px;
+          padding: 10px 0;
+        }
+
         &:hover {
           transition: background-color 300ms;
           background-color: #ffa861;
@@ -75,8 +80,24 @@
         text-align: center;
         width: 260px;
 
-        span {
-          font-weight: 600;
+        .product_info {
+          h4 {
+            font-size: 18px;
+            line-height: 34px;
+            
+            @media only screen and (max-width: 640px) {
+              font-size: 24px;
+            }
+          }
+
+          span {
+            font-weight: 600;
+            font-size: 17px;
+
+            @media only screen and (max-width: 640px) {
+              font-size: 22px;
+            }
+          }
         }
 
         .img {

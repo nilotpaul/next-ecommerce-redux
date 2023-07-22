@@ -57,17 +57,28 @@ export default function Navbar() {
       <div className="nav_container">
         <div className="left_side">
           <Link href={"/"} id="brandname">
-            <Image id="logo" src="/logo.png" alt="NexusMart" height={37} width={180} />
+            <Image
+              id="logo"
+              src="/logo.png"
+              alt="NexusMart"
+              height={37}
+              width={180}
+              priority
+            />
           </Link>
         </div>
         {data.status === "authenticated" ? (
           <div className="items">
-            <button id="cart_btn" ref={cartIco} onClick={() => setOpenDrop(!openDrop)}>
+            <button
+              id="cart_btn"
+              ref={cartIco}
+              onClick={() => setOpenDrop(!openDrop)}
+            >
               <span>{totalCount}</span>
               <FaShoppingCart id="shop_ico" />
             </button>
             <Link id="mobile_cart" href={"/cart"}>
-              <span>{totalCount}</span>
+              <span id="moblie_count">{totalCount}</span>
               <FaShoppingCart id="mobile_ico" />
             </Link>
 
@@ -125,8 +136,8 @@ export default function Navbar() {
               ref={profileRef}
               className={`profile_drop ${profileDrop ? "" : "hidden"}`}
             >
-              <span>{data.data.user.name}</span>
-              <span>{data.data.user.email}</span>
+              <span>{data?.data.user.name}</span>
+              <span>{data?.data.user.email}</span>
               <Link href={"/signout"}>
                 <span>Logout</span>
               </Link>

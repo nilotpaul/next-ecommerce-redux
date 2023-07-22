@@ -2,8 +2,13 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import "@/styles/products.scss";
 import Link from "next/link";
-const Add_to_cart = dynamic(() => import("./Add_to_cart"), { ssr: false });
+const Add_to_cart = dynamic(() => import("./Add_to_cart"));
 import { products } from "@/lib/Products";
+
+export const metadata = {
+  title: "Products",
+  description: "Find the best product from our collection",
+};
 
 export default function Products() {
   return (
@@ -19,15 +24,15 @@ export default function Products() {
                 <Image
                   src={items.img}
                   alt={items.name}
-                  width={220}
-                  height={260}
+                  width={260}
+                  height={300}
                   priority
                 />
               </Link>
               <h3>{items.name}</h3>
 
               <p>
-                <strong>₹ {items.price}</strong>
+                <span>₹ {items.price}</span>
               </p>
               <Add_to_cart items={items} />
             </div>

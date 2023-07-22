@@ -3,9 +3,7 @@ import { products } from "@/lib/Products";
 import "@/styles/bestSelling.scss";
 import Image from "next/image";
 import Link from "next/link";
-const Add_to_cart = dynamic(() => import("@/app/products/Add_to_cart"), {
-  ssr: false,
-});
+const Add_to_cart = dynamic(() => import("@/app/products/Add_to_cart"));
 
 export default function BestSelling() {
   return (
@@ -19,11 +17,13 @@ export default function BestSelling() {
                 <Link prefetch href={`/products/${items.id}`} className="items">
                   <div className="img">
                     <Image
-                      style={{ objectFit: "cover" }}
+                      style={{
+                        objectFit: "cover",
+                      }}
                       src={items.img}
                       alt={items.name}
                       fill
-                      sizes="(max-width: 640px) 220px, (max-width: 768px) 320px, 475px"
+                      sizes="260px"
                     />
                   </div>
                   <div className="product_info">

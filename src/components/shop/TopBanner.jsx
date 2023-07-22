@@ -9,7 +9,7 @@ export default function TopBanner() {
       </div>
       <div className="bottom_items">
         <h4>SHOP ON</h4>
-        <p>dummywebsitelink.com</p>
+        <p>nexusmart.up.railway.app</p>
       </div>
     </div>
   );

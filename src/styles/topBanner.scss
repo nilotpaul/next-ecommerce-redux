@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
 
   .top_items {
     display: flex;
@@ -13,7 +16,6 @@
 
     @media only screen and (max-width: 640px) {
       text-align: center;
-      margin-top: 25px;
     }
 
     h1 {
@@ -59,11 +61,20 @@
       margin: 0;
       font-size: 22px;
       font-weight: 400;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 20px;
+      }
     }
 
     p {
       font-weight: 300;
-      font-size: 17.5px;
+      font-size: 22px;
+      margin-top: 14px;
+
+      @media only screen and (max-width: 640px) {
+        font-size: 22px;
+      }
     }
   }
 }

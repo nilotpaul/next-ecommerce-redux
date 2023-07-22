@@ -7,6 +7,12 @@ const Signin = dynamic(() => import("@/components/signin/Signin"), {
   ssr: false,
 });
 
+export const metadata = {
+  title: {
+    absolute: "Sign in to NexusMart",
+  },
+};
+
 export default async function SigninPage() {
   const session = await getServerSession(authOptions);
   if (session) {

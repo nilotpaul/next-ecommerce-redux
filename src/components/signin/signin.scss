@@ -26,8 +26,8 @@
             outline: none;
             border: 0;
             padding: 20px 50px;
-            width: 274px;
             border-radius: 10px;
+            min-width: 100%;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -35,6 +35,12 @@
             font-weight: 500;
             column-gap: 8px;
             background-color: #fb923c;
+            font-size: 16px;
+
+            @media only screen and (max-width: 640px) {
+                font-size: 20px;
+                min-width: 100%;
+            }
         }
     }
 }

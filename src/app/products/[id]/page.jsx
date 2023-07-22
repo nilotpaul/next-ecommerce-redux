@@ -1,8 +1,24 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import "@/styles/product.scss";
-const Add_btn = dynamic(() => import("./Add_btn"), { ssr: false });
+const Add_btn = dynamic(() => import("./Add_btn"));
 import { products } from "@/lib/Products";
+
+export function generateMetadata({ params: { id } }) {
+  const data = products[id - 1];
+
+  if (!data) {
+    return {
+      title: "Not Found",
+      description: "Page does not exist",
+    };
+  } else {
+    return {
+      title: data.name,
+      description: data.desc,
+    };
+  }
+}
 
 export const dynamicParams = false;
 

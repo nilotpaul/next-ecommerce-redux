@@ -43,7 +43,6 @@ export default function Signin() {
         onClick={() => {
           setIsLoadings(true);
           signIn("google", { callbackUrl });
-          setIsLoading(false)
         }}
       >
         {isLoadings ? (

@@ -1,6 +1,6 @@
 "use client";
 
-import { minus, plus, total } from "@/Redux/CartSlice";
+import { minus, plus } from "@/Redux/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -8,7 +8,6 @@ import "../styles/itemsQty.scss";
 
 export default function ItemsQty({ items, cartCount }) {
   const currCartState = useSelector((state) => state.cartSlice);
-  const count = useSelector((state) => state.cartSlice.totalCount);
   const dispatch = useDispatch();
 
   const plusQty = (items) => {
@@ -28,7 +27,7 @@ export default function ItemsQty({ items, cartCount }) {
           <button id="minus_btn" onClick={() => minusQty(items)}>
             <AiOutlineMinus id="minus_ico" />
           </button>
-          {cartCount}
+          <span>{cartCount}</span>
           <button id="plus_btn" onClick={() => plusQty(items)}>
             <AiOutlinePlus id="plus_ico" />
           </button>
