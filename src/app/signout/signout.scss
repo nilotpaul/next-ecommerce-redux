@@ -42,12 +42,12 @@
       display: flex;
       align-items: center;
       column-gap: 6px;
-      font-weight: 600;
+      font-weight: 500;
       background-color: #ff9b49;
 
       @media only screen and (max-width: 640px) {
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 19px;
         width: 100%;
       }
     }

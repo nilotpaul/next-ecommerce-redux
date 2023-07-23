@@ -26,7 +26,7 @@ export default function Shop() {
             fill
             priority
             quality={100}
-            sizes="100vw"
+            sizes="3000px"
           />
           <TopBanner />
         </div>
