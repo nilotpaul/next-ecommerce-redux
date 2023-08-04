@@ -1,4 +1,4 @@
-# NeuxsMart - Ecommerce Store
+# NexusMart - Ecommerce Store
 Built with Next.js and Redux
 
 ## Overview
