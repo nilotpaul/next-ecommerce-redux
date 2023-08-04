@@ -1,11 +1,10 @@
 # NexusMart - Ecommerce Store
 Built with Next.js and Redux
 
-## Overview
-### Homepage:
+## Homepage:
 ![](.gitres/home.png)
 
-### Cart:
+## Cart:
 ![](.gitres/cart.png)
 
 ## Features
